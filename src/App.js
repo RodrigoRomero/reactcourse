@@ -1,15 +1,17 @@
 import './assets/css/App.css';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
-import Skills from './components/Skills.js';
+import Body from './components/Body.js';
+
+
 
 function App() {
   return (
     <div className="App">
     <Header />
-      <div>
-        <Skills />
-      </div>
+      <section>
+        <Body />
+      </section>
         
         <p>
           Edit <code>src/App.js</code> and save to reload.
