@@ -1,9 +1,10 @@
+import React, { useState, Component } from 'react';
 import '../assets/css/Body.css';
 import Contacts from './Contacts.js';
 import Skills from './Skills.js';
 
 
-function Body(){
+const Body = () =>{
 
 return(
 	<section>

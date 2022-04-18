@@ -1,6 +1,21 @@
-import ContactsItem from './ContactsItem.js';
+import React, { UseState } from 'react';
 
-function Contacts(){
+import ContactsItem from './ContactsItem.js';
+import Form from './UI/Forms/Form';
+
+const Contacts = () =>{
+
+
+
+	const formBuilder ={
+		"frmFunction": "submitTestHandler",
+		"frmInputs": [
+			{type:"text", label:"FullName", name:"full_name", "tabindex":1, "validate":true, "placeholder":"Full Name", "onchange": "userNameChangeHandler"},
+			{type:"text", label:"Email", name:"frm-email", "tabindex":2, "validate":true, "placeholder":"Email"},
+			{type:"text", label:"Title", name:"frm-email", "tabindex":3, "validate":true, "placeholder":"Title"},
+		],
+		"frmButton": {type:"submit", value: "Submit"}
+	}
 
 	const contacts =[
 		{item:"Primary Mail", value:"rorigo.lolo.romero@gmail.com"},
@@ -10,6 +25,7 @@ function Contacts(){
 
 	return(
 		<div>
+		<Form data={formBuilder}/>
 			<ul>
 				<ContactsItem contact={contacts[0]} />
 				<ContactsItem contact={contacts[1]} />

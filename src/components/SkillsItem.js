@@ -1,7 +1,15 @@
-function SkillsItem(props){
+import React, { useState, Component } from 'react';
+import {ListItem, ListItemText, Rating} from '@mui/material';
+
+const SkillsItem = (props) =>{
 
 	return(
-		<li>{props.skills.item} * {props.skills.rating}</li>
+		<ListItem key={props.id} disableGutters={true}> 
+		<ListItemText
+                    primary={props.item}
+                    
+                  /><Rating name="half-rating" value={+props.rating} readOnly />
+		</ListItem>
 		);
 
 };

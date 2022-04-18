@@ -1,6 +1,9 @@
+import React, { useState, Component } from 'react';
+
+import {List} from '@mui/material';
 import SkillsItem from './SkillsItem.js';
 
-function Skills(){
+const Skills = () =>{
 
 	const skills =[
 		{item:"Scrum Master", rating:"5"},
@@ -12,13 +15,9 @@ function Skills(){
 
 	return(
 		<div>
-			<ul>
-				<SkillsItem skills={skills[0]} />
-				<SkillsItem skills={skills[1]} />
-				<SkillsItem skills={skills[2]} />
-				<SkillsItem skills={skills[3]} />
-				<SkillsItem skills={skills[4]} />
-			</ul>
+			<List >
+				{skills.map((skill,i) => <SkillsItem key={i} item={skill.item} rating={skill.rating} />)}
+			</List>
 		</div>
 		);
 }
